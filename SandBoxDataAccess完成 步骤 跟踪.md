@@ -39,7 +39,7 @@ SandBoxManager的DataAccess类拓展的封装  步骤跟踪
 
 沙盒目录下截图展示效果展示：
 
-
+![MacDown logo](https://github.com/HeYang123456789/SandBoxManager/blob/master/sandBoxPicture.png?raw=true)
 
 还需要考虑的问题：
 
