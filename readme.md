@@ -12,8 +12,9 @@ SandBoxManager的DataAccess类拓展的封装  步骤跟踪
 	
 完成的部分代码使用展示：
 
+存取一个字典
+
 ```
-    //存储一个字典
     NSDictionary* dic = @{@"Hello":@"non",@"World":@"mao"};
     //字典存储的plist文件名是Hello.plist
     NSString* fileName = @"Hello.plist";
@@ -25,8 +26,11 @@ SandBoxManager的DataAccess类拓展的封装  步骤跟踪
     NSDictionary* dict = [NSDictionary readFromCachesWithFileName:fileName];
 
     NSLog(@"%@",dict);
-    /*============================================================================*/
-    //存储一个数组
+```
+
+存取一个数组
+
+```
     NSArray* arr = @[@12,@24,@45,@"shel"];
     //字典存储的txt文件名是Hello.txt
     NSString* fileName2 = @"Hello.txt";
