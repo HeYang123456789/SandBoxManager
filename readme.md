@@ -1,5 +1,4 @@
-SandBoxManager的DataAccess类拓展的封装  步骤跟踪
-
+SandBoxManager的Data Access类拓展的封装 
 
 已经完成的部分：
 
