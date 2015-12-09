@@ -12,11 +12,17 @@ SandBoxManager的DataAccess类拓展的封装  步骤跟踪
 	
 完成的部分代码使用展示：
 
-首先需要导入的项目中的文件目录
+首先需要拷贝项目中的文件到你需要使用的项目中去：
 
 ![MacDown logo](https://github.com/HeYang123456789/SandBoxManager/blob/master/导入的代码文件.png?raw=true)
 
-然后字典和数组存取使用实例：
+然后在你的需要对沙盒进行操作的文件中加上即可：
+
+```
+#import "SandBoxManager.h"
+```
+
+然后字典和数组存取使用示例：
 
 1、存取一个字典
 
