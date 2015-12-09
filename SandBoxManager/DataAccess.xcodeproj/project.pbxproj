@@ -16,7 +16,6 @@
 		3B74D7261C1669090065B49E /* DataAccessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B74D7251C1669090065B49E /* DataAccessTests.m */; };
 		3B74D7311C1669090065B49E /* DataAccessUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B74D7301C1669090065B49E /* DataAccessUITests.m */; };
 		3B74D7471C16AF530065B49E /* SandBoxManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B74D7461C16AF530065B49E /* SandBoxManager.m */; };
-		3B74D74D1C16B3420065B49E /* SandBoxManager+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B74D74C1C16B3420065B49E /* SandBoxManager+Path.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +54,6 @@
 		3B74D7321C1669090065B49E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B74D7451C16AF530065B49E /* SandBoxManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SandBoxManager.h; sourceTree = "<group>"; };
 		3B74D7461C16AF530065B49E /* SandBoxManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SandBoxManager.m; sourceTree = "<group>"; };
-		3B74D74B1C16B3420065B49E /* SandBoxManager+Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SandBoxManager+Path.h"; sourceTree = "<group>"; };
-		3B74D74C1C16B3420065B49E /* SandBoxManager+Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SandBoxManager+Path.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +109,6 @@
 				3B74D7111C1669080065B49E /* ViewController.h */,
 				3B74D7121C1669080065B49E /* ViewController.m */,
 				3B74D7141C1669080065B49E /* Main.storyboard */,
-				3B74D74B1C16B3420065B49E /* SandBoxManager+Path.h */,
-				3B74D74C1C16B3420065B49E /* SandBoxManager+Path.m */,
 				3B74D7441C16AF530065B49E /* SandBox */,
 				3B74D7171C1669080065B49E /* Assets.xcassets */,
 				3B74D7191C1669080065B49E /* LaunchScreen.storyboard */,
@@ -288,7 +283,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B74D74D1C16B3420065B49E /* SandBoxManager+Path.m in Sources */,
 				3B74D7131C1669080065B49E /* ViewController.m in Sources */,
 				3B74D7101C1669080065B49E /* AppDelegate.m in Sources */,
 				3B74D70D1C1669080065B49E /* main.m in Sources */,
@@ -516,6 +510,7 @@
 				3B74D7371C1669090065B49E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B74D7381C1669090065B49E /* Build configuration list for PBXNativeTarget "DataAccessTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +519,7 @@
 				3B74D73A1C1669090065B49E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B74D73B1C1669090065B49E /* Build configuration list for PBXNativeTarget "DataAccessUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +528,7 @@
 				3B74D73D1C1669090065B49E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

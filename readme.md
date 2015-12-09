@@ -12,6 +12,9 @@ SandBoxManager的DataAccess类拓展的封装  步骤跟踪
 	
 完成的部分代码使用展示：
 
+首先需要导入的项目中的文件目录
+![MacDown logo](https://github.com/HeYang123456789/SandBoxManager/blob/master/sandBoxPicture.png?raw=true)
+
 存取一个字典
 
 ```
@@ -34,6 +37,7 @@ SandBoxManager的DataAccess类拓展的封装  步骤跟踪
     NSArray* arr = @[@12,@24,@45,@"shel"];
     //字典存储的txt文件名是Hello.txt
     NSString* fileName2 = @"Hello.txt";
+    
     //将数组写入，然后读取
     [arr writeToCachesWithFileName:fileName2];
     NSArray* array = [NSArray readFromCachesWithFileName:fileName2];
