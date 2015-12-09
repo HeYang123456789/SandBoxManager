@@ -12,7 +12,7 @@
 
 @interface SandBoxManager : NSObject
 
-#pragma mark  1 - 关于DocumentsPath
+#pragma mark  1-1 - 关于DocumentsPath
 /**
  *  get DocumentsPath
  *
@@ -25,14 +25,14 @@
  */
 +(NSString *)sandBoxDocumentPathWithFileName:(NSString *)fileName;
 
-#pragma mark  2 - 关于LibraryPath
+#pragma mark  1-2 - 关于LibraryPath
 /**
  *  get Library目录
  *  Library目录下又两个目录：Caches和Preferences，
  *  所以一般不会把文件数据直接存储在Library目录下面的
  */
 +(NSString *)sandBoxLibraryPath;
-#pragma mark  3 - get Prefenences 目录
+#pragma mark  1-3 - get Prefenences 目录
 /**
  *  get Preferences目录
  *
@@ -44,7 +44,7 @@
  */
 +(NSString *)sandBoxPreferencesPathWithFileName:(NSString*)fileName;
 
-#pragma mark  4 - 关于CachePath
+#pragma mark  1-4 - 关于CachePath
 /**
  *  get Caches目录
  *
@@ -58,7 +58,7 @@
 
 +(NSString*)sandBoxCachesPathWithFileName:(NSString*)fileName;
 
-#pragma mark  5 - 关于TmpPath
+#pragma mark  1-5 - 关于TmpPath
 /**
  *  get Tmp目录
  *
@@ -70,7 +70,7 @@
  */
 +(NSString*)sandBoxTmpPathWithFileName:(NSString*)fileName;
 
-#pragma mark  6 - 关于HomePath
+#pragma mark  1-6 - 关于HomePath
 /**
  *  get Home目录
  *
@@ -82,7 +82,44 @@
  */
 +(NSString*)sandBoxHomePathWithFileName:(NSString*)fileName;
 
+
+
 @end
+#pragma mark - 2-1 关于偏好设置的存储
+@interface NSUserDefaults (SandBoxManager)
+//使用了单例类NSUserDefaults
+/*
+ - (nullable id)objectForKey:(NSString *)defaultName;
+ - (void)setObject:(nullable id)value forKey:(NSString *)defaultName;
+ - (void)removeObjectForKey:(NSString *)defaultName;
+ 
+ - (nullable NSString *)stringForKey:(NSString *)defaultName;
+ - (nullable NSArray *)arrayForKey:(NSString *)defaultName;
+ - (nullable NSDictionary<NSString *, id> *)dictionaryForKey:(NSString *)defaultName;
+ - (nullable NSData *)dataForKey:(NSString *)defaultName;
+ - (nullable NSArray<NSString *> *)stringArrayForKey:(NSString *)defaultName;
+ - (NSInteger)integerForKey:(NSString *)defaultName;
+ - (float)floatForKey:(NSString *)defaultName;
+ - (double)doubleForKey:(NSString *)defaultName;
+ - (BOOL)boolForKey:(NSString *)defaultName;
+ - (nullable NSURL *)URLForKey:(NSString *)defaultName NS_AVAILABLE(10_6, 4_0);
+ 
+ - (void)setInteger:(NSInteger)value forKey:(NSString *)defaultName;
+ - (void)setFloat:(float)value forKey:(NSString *)defaultName;
+ - (void)setDouble:(double)value forKey:(NSString *)defaultName;
+ - (void)setBool:(BOOL)value forKey:(NSString *)defaultName;
+ - (void)setURL:(nullable NSURL *)url forKey:(NSString *)defaultName NS_AVAILABLE(10_6, 4_0);
+ */
+/*使用案例
+ 
+ */
+//+(void)setObject
+
++(void)setObject:(id)value forKey:(NSString *)defaultName;
++(void)setObject:(id)value forKey:(NSString *)defaultName isSynchronize:(BOOL)isSynchronize;
+
+@end
+
 
 #pragma mark - NSString的类别，通过文件名对象直接获取添加这个文件名的对应的沙盒目录
 
@@ -107,6 +144,7 @@
  *
  */
 -(NSString *)fileNameWithTmpPath;
+/*=============================================*/
 
 @end
 #pragma mark - 字典对象对沙盒目录进行写入和读取

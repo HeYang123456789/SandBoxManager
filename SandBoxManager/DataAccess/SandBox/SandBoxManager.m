@@ -67,6 +67,24 @@
 }
 @end
 
+@implementation NSUserDefaults (SandBoxManager)
+
++(void)setObject:(id)value forKey:(NSString *)defaultName{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:value forKey:defaultName];
+}
++(void)setObject:(id)value forKey:(NSString *)defaultName isSynchronize:(BOOL)isSynchronize{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:value forKey:defaultName];
+    
+    if (isSynchronize) {
+        [userDefaults synchronize];
+    }
+}
+
+@end
+
+
 #pragma mark - NSString的类别，通过文件名对象直接获取添加这个文件名的对应的沙盒目录
 
 @implementation NSString (SandBoxPath)
