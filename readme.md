@@ -13,9 +13,12 @@ SandBoxManager的DataAccess类拓展的封装  步骤跟踪
 完成的部分代码使用展示：
 
 首先需要导入的项目中的文件目录
-![MacDown logo](https://github.com/HeYang123456789/SandBoxManager/blob/master/sandBoxPicture.png?raw=true)
 
-存取一个字典
+![MacDown logo](https://github.com/HeYang123456789/SandBoxManager/blob/master/导入的代码文件.png?raw=true)
+
+然后字典和数组存取使用实例：
+
+1、存取一个字典
 
 ```
     NSDictionary* dic = @{@"Hello":@"non",@"World":@"mao"};
@@ -31,7 +34,7 @@ SandBoxManager的DataAccess类拓展的封装  步骤跟踪
     NSLog(@"%@",dict);
 ```
 
-存取一个数组
+2、存取一个数组
 
 ```
     NSArray* arr = @[@12,@24,@45,@"shel"];
