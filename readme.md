@@ -57,7 +57,7 @@ SandBoxManager的Data Access类拓展的封装
 
 ![MacDown logo](https://github.com/HeYang123456789/SandBoxManager/blob/master/sandBoxPicture.png?raw=true)
 
-3、存取偏好设置
+3、存取偏好设置 (默认存储在沙盒的Preferences目录下)
 
 ```
 //直接使用NSUserDefaults的类方法
