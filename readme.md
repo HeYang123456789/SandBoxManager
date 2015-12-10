@@ -6,7 +6,8 @@ SandBoxManager的Data Access类拓展的封装
 	1：沙盒的五个目录Documents,Caches,Library,Preferences,tmp的目录获取
 	2：根据指定文件对沙盒的五个目录Documents,Caches,Library,Preferences,tmp的文件目录获取
 	3：写出(NSString*)fileName的类别
-	4：实现了对字典数组对象的直接存取
+	4：实现了对字典和数组对象的直接存取
+	5：实现了偏好设置的类别拓展，直接通过NSUserDefaults类方法就能实现存取用户偏好设置
 ```
 	
 完成的部分代码使用展示：
