@@ -18,12 +18,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     
+    [NSUserDefaults setObject:@"heyang" forKey:@"name"];
+    [NSUserDefaults setObject:@"donghualigongdaxue" forKey:@"xuexiao"];
     
-//    [userDefaults setObject:@"heyang" forKey:@"name"];
-    
-    [NSUserDefaults setObject:@"heyang" forKey:@"name" isSynchronize:YES];
+    NSLog(@"%@",[NSUserDefaults objectForKey:@"name"]);
+    NSLog(@"%@",[NSUserDefaults objectForKey:@"xuexiao"]);
     
     
 }

@@ -57,6 +57,18 @@ SandBoxManager的Data Access类拓展的封装
 
 ![MacDown logo](https://github.com/HeYang123456789/SandBoxManager/blob/master/sandBoxPicture.png?raw=true)
 
+3、存取偏好设置
+
+```
+//直接使用NSUserDefaults的类方法
+//不需要自己创建这个单例对象，因为通过类别封装起来了
+[NSUserDefaults setObject:@"heyang" forKey:@"name"];
+[NSUserDefaults setObject:@"donghualigongdaxue" forKey:@"xuexiao"];
+
+NSLog(@"%@",[NSUserDefaults objectForKey:@"name"]);
+NSLog(@"%@",[NSUserDefaults objectForKey:@"xuexiao"]);
+```
+
 还需要考虑的问题：
 
 ```

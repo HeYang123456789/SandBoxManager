@@ -8,6 +8,8 @@
 
 #import "SandBoxManager.h"
 
+#define UserDefaults [NSUserDefaults standardUserDefaults]
+
 @implementation SandBoxManager
 #pragma mark - 获取沙盒相关的路径
 
@@ -67,19 +69,68 @@
 }
 @end
 
+#pragma mark - NSUserDefaults 对象对默认的沙盒Prefences目录进行写入和读取
 @implementation NSUserDefaults (SandBoxManager)
 
+
 +(void)setObject:(id)value forKey:(NSString *)defaultName{
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setObject:value forKey:defaultName];
+    [UserDefaults setObject:value forKey:defaultName];
 }
-+(void)setObject:(id)value forKey:(NSString *)defaultName isSynchronize:(BOOL)isSynchronize{
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setObject:value forKey:defaultName];
-    
-    if (isSynchronize) {
-        [userDefaults synchronize];
-    }
+/** 删除key对应的Object */
++(void)removeObjectForKey:(NSString *)defaultName{
+    [UserDefaults removeObjectForKey:defaultName];
+}
++(id)objectForKey:(NSString *)defaultName{
+    return [UserDefaults objectForKey:defaultName];
+}
++(NSString *)stringForKey:(NSString *)defaultName{
+    return [UserDefaults stringForKey:defaultName];
+}
++( NSArray *)arrayForKey:(NSString *)defaultName{
+    return [UserDefaults arrayForKey:defaultName];
+}
++( NSDictionary<NSString *, id> *)dictionaryForKey:(NSString *)defaultName{
+    return [UserDefaults dictionaryForKey:defaultName];
+}
++(NSData *)dataForKey:(NSString *)defaultName{
+    return [UserDefaults dataForKey:defaultName];
+}
++(NSArray<NSString *> *)stringArrayForKey:(NSString *)defaultName{
+    return [UserDefaults stringArrayForKey:defaultName];
+}
++(NSInteger)integerForKey:(NSString *)defaultName{
+    return [UserDefaults integerForKey:defaultName];
+}
++(float)floatForKey:(NSString *)defaultName{
+    return [UserDefaults floatForKey:defaultName];
+}
++(double)doubleForKey:(NSString *)defaultName{
+    return [UserDefaults doubleForKey:defaultName];
+}
++(BOOL)boolForKey:(NSString *)defaultName{
+    return [UserDefaults boolForKey:defaultName];
+}
++(NSURL *)URLForKey:(NSString *)defaultName{
+    return [UserDefaults URLForKey:defaultName];
+}
++(void)setInteger:(NSInteger)value forKey:(NSString *)defaultName{
+    [UserDefaults setInteger:value forKey:defaultName];
+}
++(void)setFloat:(float)value forKey:(NSString *)defaultName{
+    [UserDefaults setFloat:value forKey:defaultName];
+}
++(void)setDouble:(double)value forKey:(NSString *)defaultName{
+    [UserDefaults setDouble:value forKey:defaultName];
+}
++(void)setBool:(BOOL)value forKey:(NSString *)defaultName{
+    [UserDefaults setBool:value forKey:defaultName];
+}
++(void)setURL:(NSURL *)url forKey:(NSString *)defaultName{
+    [UserDefaults setURL:url forKey:defaultName];
+}
+
++(void)isSynchronize{
+    [UserDefaults synchronize];
 }
 
 @end
@@ -109,7 +160,7 @@
 
 
 @end
-
+#pragma mark - 字典对象对沙盒目录进行写入和读取
 @implementation NSDictionary (SandBox)
 #pragma mark 读取
 -(void)writeToDocumentsWithFileName:(NSString*)fileName{

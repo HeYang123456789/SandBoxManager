@@ -85,38 +85,51 @@
 
 
 @end
-#pragma mark - 2-1 关于偏好设置的存储
-@interface NSUserDefaults (SandBoxManager)
-//使用了单例类NSUserDefaults
-/*
- - (nullable id)objectForKey:(NSString *)defaultName;
- - (void)setObject:(nullable id)value forKey:(NSString *)defaultName;
- - (void)removeObjectForKey:(NSString *)defaultName;
- 
- - (nullable NSString *)stringForKey:(NSString *)defaultName;
- - (nullable NSArray *)arrayForKey:(NSString *)defaultName;
- - (nullable NSDictionary<NSString *, id> *)dictionaryForKey:(NSString *)defaultName;
- - (nullable NSData *)dataForKey:(NSString *)defaultName;
- - (nullable NSArray<NSString *> *)stringArrayForKey:(NSString *)defaultName;
- - (NSInteger)integerForKey:(NSString *)defaultName;
- - (float)floatForKey:(NSString *)defaultName;
- - (double)doubleForKey:(NSString *)defaultName;
- - (BOOL)boolForKey:(NSString *)defaultName;
- - (nullable NSURL *)URLForKey:(NSString *)defaultName NS_AVAILABLE(10_6, 4_0);
- 
- - (void)setInteger:(NSInteger)value forKey:(NSString *)defaultName;
- - (void)setFloat:(float)value forKey:(NSString *)defaultName;
- - (void)setDouble:(double)value forKey:(NSString *)defaultName;
- - (void)setBool:(BOOL)value forKey:(NSString *)defaultName;
- - (void)setURL:(nullable NSURL *)url forKey:(NSString *)defaultName NS_AVAILABLE(10_6, 4_0);
- */
-/*使用案例
- 
- */
-//+(void)setObject
 
+#pragma mark - 2-1 关于NSUserDefaults 偏好设置 的存储
+@interface NSUserDefaults (SandBoxManager)
+//使用了单例类NSUserDefaults偏好设置对象 默认存储在沙盒的Preferences
+/** 存储Object */
 +(void)setObject:(id)value forKey:(NSString *)defaultName;
-+(void)setObject:(id)value forKey:(NSString *)defaultName isSynchronize:(BOOL)isSynchronize;
+/** 删除key对应的Object */
++(void)removeObjectForKey:(NSString *)defaultName;
+/** 由key获取Object */
++(id)objectForKey:(NSString *)defaultName;
+/** 由key获取NSString */
++(NSString *)stringForKey:(NSString *)defaultName;
+/** 由key获取NSArray */
++( NSArray *)arrayForKey:(NSString *)defaultName;
+/** 由key获取NSDictionary */
++( NSDictionary<NSString *, id> *)dictionaryForKey:(NSString *)defaultName;
+/** 由key获取NSData */
++(NSData *)dataForKey:(NSString *)defaultName;
+/** 由key获取String的NSArray */
++(NSArray<NSString *> *)stringArrayForKey:(NSString *)defaultName;
+/** 由key获取NSInteger */
++(NSInteger)integerForKey:(NSString *)defaultName;
+/** 由key获取float */
++(float)floatForKey:(NSString *)defaultName;
+/** 由key获取double */
++(double)doubleForKey:(NSString *)defaultName;
+/** 由key获取bool */
++(BOOL)boolForKey:(NSString *)defaultName;
+/** 由key获取URL */
++(NSURL *)URLForKey:(NSString *)defaultName;
+
+/** 存储Integer */
++(void)setInteger:(NSInteger)value forKey:(NSString *)defaultName;
+/** 存储Float */
++(void)setFloat:(float)value forKey:(NSString *)defaultName;
+/** 存储double */
++(void)setDouble:(double)value forKey:(NSString *)defaultName;
+/** 存储bool */
++(void)setBool:(BOOL)value forKey:(NSString *)defaultName;
+/** 存储URL */
++(void)setURL:(NSURL *)url forKey:(NSString *)defaultName;
+
+/** 存储 之后是否 立即 同步存储 */
++(void)isSynchronize;
+
 
 @end
 
